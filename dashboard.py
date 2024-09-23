@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 import matplotlib as mp
 import matplotlib.pyplot as plt
-import os
 import seaborn as sns
+import os
 import streamlit as st
 
-df = pd.read_csv(os.getcwd()+'\Datas.csv', index_col=False)
+df = pd.read_csv('Datas.csv', index_col=False)
 print(df)
 
 def gases (df):
@@ -41,14 +41,6 @@ hipo1 = hipotesis1_set(df)
 hipo2 = hipotesis2_set(df)
 hipo3 = hipotesis3_set(df)
 hipo4 = hipotesis4_set(df, 'NO2')
-#pert1 = pertanyaan_set(df)
-#pert2 = pertanyaan_set(df)
-
-#print(hipo1.filter(regex="2013", axis=0))
-#print(type(hipo2))
-print('Hipo4')
-print(hipo4.loc[hipo4['year'] == 2013])
-#print(gas)
 
 #Streamlit Environment
 
